@@ -35,7 +35,7 @@ jobs:
       - name: Packing
         run: |
           mkdir -p atmosphere/kips
-          cp /loader.kip atmosphere/kips/
+          cp loader.kip atmosphere/kips/
           zip -r EOS.zip atmosphere/
 
       - name: Release
