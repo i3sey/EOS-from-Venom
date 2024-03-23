@@ -27,13 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Dowloading
-        run: git clone https://github.com/CatcherITGF/NX-Venom
+        run: curl -O https://github.com/CatcherITGF/NX-Venom/raw/main/Sources/Tools/Web%20Configurator/loader.kip
 
       # Runs a set of commands using the runners shell
       - name: Packing
         run: |
-          mkdir -p /atmosphere/kips/
-          move "NX-Venom/Sources/Tools/Web Configurator/loader.kip" atmosphere/kips/loader.kip
+          mkdir -p atmosphere/kips
+          move loader.kip atmosphere/kips/loader.kip
           zip -r EOS.zip atmosphere/
 
       - name: Release
